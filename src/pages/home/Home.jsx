@@ -14,7 +14,11 @@ function Home() {
     <>
       <main className="w-full flex flex-col items-center justify-center">
         <Header />
-        {selectedInvoice ? <InvoiceDetails /> : <InvoiceList />}
+        {selectedInvoice ? (
+          <InvoiceDetails invoice={selectedInvoice} />
+        ) : (
+          <InvoiceList />
+        )}
         {isFormOpen ? <InvoiceForm invoice={selectedInvoice} /> : null}
       </main>
     </>

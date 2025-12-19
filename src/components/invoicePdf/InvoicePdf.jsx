@@ -1,20 +1,17 @@
-import { Page, Text, View, Document,} from '@react-pdf/renderer';
-import { styles } from './PdfStyle';
-// Create styles
+import InvoiceDocument from "../invoiceDocument/InvoiceDocument";
 
+function InvoicePdf({ invoice }) {
+  if (!invoice) return null;
 
-// Create Document Component
-const InvoicePdf = () => (
-  <Document>
-    <Page size="A4" style={styles.page}>
-      <View style={styles.section}>
-        <Text>Section #1</Text>
-      </View>
-      <View style={styles.section}>
-        <Text>Section #2</Text>
-      </View>
-    </Page>
-  </Document>
-);
+  return (
+    <>
+      <div style={{ width: "100%", height: "100vh" }}>
+        <PDFViewer>
+          <InvoiceDocument invoice={invoice} />
+        </PDFViewer>
+      </div>
+    </>
+  );
+}
 
-
+export default InvoicePdf;

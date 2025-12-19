@@ -1,10 +1,11 @@
-import React from 'react';
-import { Home } from './pages';
+import { Home } from "./pages";
 
 function App() {
-  return <>
-   <Home/>
-  </>
+  return (
+    <>
+      <Home />
+    </>
+  );
 }
 
-export default App
+export default App;

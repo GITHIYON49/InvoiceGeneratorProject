@@ -1,6 +1,6 @@
 import { format, parseISO } from "date-fns";
 import { IndianRupee, ChevronRight } from "lucide-react";
-import { useSelector,useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { selectedInvoiceList } from "../../feature/InvoiceSlice";
 
 function InvoiceList() {
@@ -36,23 +36,23 @@ function InvoiceList() {
           return (
             <div
               key={invoice.id}
-              className="w-3/5 flex items-center justify-between bg-teal-800 p-3.5 rounded-sm cursor-pointer active:scale-105 transition-all duration-300 ease-in-out"
+              className="w-11/12 md:w-4/5 lg:w-3/5 flex items-center justify-between gap-2 bg-teal-800 p-2 md:p-3.5 rounded-sm cursor-pointer active:scale-105 transition-all duration-300 ease-in-out"
               onClick={() => dispatch(selectedInvoiceList(invoice))}
             >
-              <div className="flex items-center justify-center text-base font-semibold text-white gap-7">
+              <div className="flex items-center justify-center text-sm md:text-base font-semibold text-white gap-4 md:gap-5 lg:gap-7">
                 <span className="capitalize text-slate-400">{invoice.id}</span>
                 <span className="capitalize text-slate-400">
                   {formateDate(invoice.dueDate)}
                 </span>
                 <span className="capitalize">{invoice.clientName}</span>
               </div>
-              <div className="text-white flex items-center justify-center gap-7">
-                <h5 className="flex items-center justify-center text-xl font-semibold">
-                  <IndianRupee className="size-5" />
+              <div className="text-white flex items-center justify-center gap-4 md:gap-5 lg:gap-7">
+                <h5 className="flex items-center justify-center text-base md:text-lg lg:text-xl font-semibold">
+                  <IndianRupee className="size-4 lg:size-5" />
                   {invoice.amount}
                 </h5>
                 <div
-                  className={`rounded-xl flex items-center justify-center gap-1 px-4 py-2 ${
+                  className={`rounded-xl flex items-center  justify-center gap-1 px-4 py-2 ${
                     invoice.status === "paid"
                       ? " bg-green-700/40 text-green-500"
                       : invoice.status === "pending"
@@ -69,10 +69,12 @@ function InvoiceList() {
                         : "bg-slate-500"
                     }`}
                   ></span>
-                  <span className="text-base capitalize">{invoice.status}</span>
+                  <span className="text-sm md:text-base capitalize">
+                    {invoice.status}
+                  </span>
                 </div>
                 <span className="text-slate-400">
-                  <ChevronRight className="size-6" />
+                  <ChevronRight className="size-4 md:size-5 lg:size-6" />
                 </span>
               </div>
             </div>

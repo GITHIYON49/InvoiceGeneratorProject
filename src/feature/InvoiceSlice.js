@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { addDays, format } from "date-fns";
-import { Satellite } from "lucide-react";
 
 const localState = () => {
   try {
@@ -115,6 +114,6 @@ export const {
   selectedInvoiceList,
   markAsPaid,
   deleteInvoice,
-  editInvoice
+  editInvoice,
 } = invoiceSlice.actions;
 export default invoiceSlice.reducer;
