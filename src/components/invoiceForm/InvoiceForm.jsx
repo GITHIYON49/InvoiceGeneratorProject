@@ -397,6 +397,7 @@ function InvoiceForm({ invoice }) {
               <button
                 type="button"
                 className="w-full flex items-center justify-center gap-3 text-white border-none outline-none py-3 px-5 bg-amber-600 hover:bg-amber-500 rounded-lg cursor-pointer active:scale-105 transition-all duration-200 ease-in-out"
+                 onClick={handleCloseForm}
               >
                 Cancel
               </button>
