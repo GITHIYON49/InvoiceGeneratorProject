@@ -1,16 +1,20 @@
-# React + Vite
+The project is built using React, Tailwind CSS, and Redux Toolkit.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Redux Toolkit is used for state management.
 
-Currently, two official plugins are available:
+Tailwind CSS is used for styling the user interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Redux reducers are used to add, edit, and delete invoices.
 
-## React Compiler
+All invoice data is stored in localStorage in JSON.stringify format.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+A New Invoice button is used to create new invoices.
 
-## Expanding the ESLint configuration
+The date-fns package is used to format dates into a readable format.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The Lucide icon package is used to add icons to the UI.
+
+The @react-pdf/renderer package is used to download invoices in PDF format.
+
+Invoices can be filtered based on their status using a Filter by Status button
+
